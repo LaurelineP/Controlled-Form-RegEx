@@ -1,0 +1,74 @@
+:root {
+    --boxShadow : 0 1px 5px 0 #DDD;
+    --mainColor : #CEE;
+    --darkColor : #046;
+}
+
+body {
+    margin: auto;
+    font-family: Lato;
+}
+
+*:focus {
+    outline: none;
+}
+
+.container {
+    height: 500px;
+    width: 300px;
+    margin: 5% auto;
+    padding: 50px;
+    border: solid 1px #EEE;
+    border-radius: 10px;
+    box-shadow: 0 1px 20px 1px #EEE;
+    background: var(--mainColor);
+}
+
+.signup-title {
+    font-family: Pacifico;
+    text-align: center;
+    color: var(--darkColor);
+}
+form {
+    width: auto;
+}
+
+input {
+    height: 30px;
+    width: 280px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: solid 0.5px #CEE;
+    box-shadow: 0 1px 2px 0 #CCC;
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: #CCC;
+}
+
+button[type="submit"] {
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    background: var(--darkColor);
+    border: solid 1px var(--darkColor);
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 30px calc(50% - 25%)
+}
+
+.warning.visible {
+    font-size: 13px;
+    margin: 5px 0 20px 5px;
+    color: #E53;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.warning.hidden {
+    display: none;
+}
