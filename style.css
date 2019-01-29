@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    height: 500px;
+    height: 510px;
     width: 300px;
     margin: 5% auto;
     padding: 50px;
@@ -28,6 +28,7 @@ body {
     font-family: Pacifico;
     text-align: center;
     color: var(--darkColor);
+    margin: 5% 0 10% 0;
 }
 form {
     width: auto;
@@ -36,6 +37,7 @@ form {
 input {
     height: 30px;
     width: 280px;
+    /* margin-top: 30px; */
     padding: 5px 15px;
     border-radius: 5px;
     border: solid 0.5px #CEE;
@@ -57,18 +59,21 @@ button[type="submit"] {
     color: #FFF;
     text-transform: uppercase;
     font-size: 1em;
-    margin: 30px calc(50% - 25%)
+    margin: 10px calc(50% - 25%)
 }
 
-.warning.visible {
+.warning {
+    visibility: hidden;
     font-size: 13px;
-    margin: 5px 0 20px 5px;
+}
+
+.visible {
+    visibility: visible;
+    font-size: 13px;
     color: #E53;
     font-weight: bold;
     font-style: italic;
     letter-spacing: 0.5px;
-}
-
-.warning.hidden {
-    display: none;
+    line-height: 0;
+    padding-bottom: 5.35%;
 }

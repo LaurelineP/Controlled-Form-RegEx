@@ -12,16 +12,16 @@
 <div class="container">
     <h1 class="signup-title">SignUp</h1>
     <form action="" id="signup-form">
-        <input type="text" class="username" name="username" placeholder="Pick your name" oninput="checkThat('usrN')">
-        <p class="warning visible">Must contain 5 - 12 alphanumeric characters.</p>
-        <input type="email" class="email" name="email" placeholder="smith@gmail.com" oninput="checkThat('mail')">
-        <p class="warning visible">Must be a valid email (e.g: me@mydomain.com).</p>
-        <input type="text" class="phone" name="phone" placeholder="11 22 33 44 55" oninput="checkThat('phone')">
-        <p class="warning visible">Must contain 10 digits</p>
-        <input type="password" class="password" name="password" placeholder="password" oninput="checkThat('pwd')">
-        <p class="warning visible">Must be at least 5 alphanumeric characters (@._- are allowed).</p>
+        <input type="text" class="username" name="username" placeholder="Pick your name" oninput="checkThat('username')">
+        <p class=" username warning">Must contain 5 - 12 alphanumeric characters.</p>
+        <input type="email" class="email" name="email" placeholder="smith@gmail.com" oninput="checkThat('email')">
+        <p class="email warning ">Must be a valid email (e.g: me@mydomain.com).</p>
+        <input type="text" class="phone" name="phone" placeholder="1122334455" oninput="checkThat('phone')">
+        <p class="phone warning ">Must contain 10 digits</p>
+        <input type="password" class="password" name="password" placeholder="password" oninput="checkThat('password')">
+        <p class="password warning ">At least 5 alphanumeric characters.</p>
     </form>
-    <button type="submit" onclick="checkThat(allForm)">Submit</button>
+    <button type="submit" onclick="submit()">Submit</button>
 </div>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
