@@ -4,19 +4,22 @@ function checkThat (what, e) {
     switch (what) {
         /* 5-12 alphanumeric, any case */
         case 'username':
-            regex = new RegExp ('[a-z]{5,12}','gi');
+            regex = new RegExp ('[a-z0-9]{5,12}','gi');
             process(what, regex)
             break;
 
         /* alphanumeric, @ and .com or .fr */
         case 'email':
-            regex = new RegExp('[a-z0-9]+@[a-z]+.(com|fr)$','gi');
-            process(what, regex)
+            /**
+             * (name) @ (domain) . (extension 2-8) . (optionnal extension 2-8)
+             */
+            var regex = new RegExp('^[a-z\d\.-]+@[a-z]{2,8}\.[a-z]{2,3}(\.[a-z]{2,3})?$', 'gi');
+            process(what, regex);
             break;
 
         /* 10 digits ( Europe ) */
         case 'phone':
-            regex = new RegExp('^[0-9]{10}$','g');
+            regex = new RegExp('^[0-9]{10}$','g'); /* or /\d{10}/ */
             process(what, regex)
             break;
 
