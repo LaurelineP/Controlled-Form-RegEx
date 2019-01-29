@@ -11,7 +11,7 @@
 <body>
 <div class="container">
     <h1 class="signup-title">SignUp</h1>
-    <form action="" id="signup-form">
+    <form action="" id="signup-form" oninput="checkThat('form', event)">
         <input type="text" class="username" name="username" placeholder="Pick your name" oninput="checkThat('username')">
         <p class=" username warning">Must contain 5 - 12 alphanumeric characters.</p>
         <input type="email" class="email" name="email" placeholder="smith@gmail.com" oninput="checkThat('email')">
@@ -23,6 +23,7 @@
     </form>
     <button type="submit" onclick="submit()">Submit</button>
 </div>
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
