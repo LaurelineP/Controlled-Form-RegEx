@@ -12,13 +12,13 @@
 <div class="container">
     <h1 class="signup-title">SignUp</h1>
     <form action="" id="signup-form" oninput="checkThat('form', event)">
-        <input type="text" class="username" name="username" placeholder="Pick your name human" oninput="checkThat('username')">
+        <input type="text" class="username" name="username" autocomplete placeholder="Pick your name human" oninput="checkThat('username')">
         <p class=" username warning">Must contain 5 - 12 alphanumeric characters.</p>
-        <input type="email" class="email" name="email" placeholder="Smith@gmail.com" oninput="checkThat('email')">
+        <input type="email" class="email" name="email" autocomplete placeholder="Smith@gmail.com" oninput="checkThat('email')">
         <p class="email warning ">Must be a valid email (e.g: me@mydomain.com).</p>
-        <input type="text" class="phone" name="phone" placeholder="0633333333" oninput="checkThat('phone')">
+        <input type="text" class="phone" name="phone" autocomplete placeholder="0633333333" oninput="checkThat('phone')">
         <p class="phone warning ">Must contain 10 digits</p>
-        <input type="password" class="password" name="password" placeholder="Password" oninput="checkThat('password')">
+        <input type="password" class="password" name="password" autocomplete placeholder="Password" oninput="checkThat('password')">
         <p class="password warning ">At least 5 alphanumeric characters.</p>
     </form>
     <button type="submit" onclick="submit()">Submit</button>
