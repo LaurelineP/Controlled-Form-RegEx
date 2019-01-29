@@ -54,16 +54,15 @@ function process(input, regex) {
  */
  function validateForm(e){
     var that = $(e.target)[0].className;
-    var handleButton = $('button').addClass('disable').attr('disabled', 'disabled').html(`Can't submit`);
     if($('.valid').length !== $('input').length){
-        handleButton;
+        $('button').addClass('disable').attr('disabled', 'disabled').html(`Can't submit`);
     } else {
         $('button').removeClass('disable').removeAttr('disabled').html('Submit');
 
         /* Handle cases once valid and then modify input --> back to button disabled */
         if($('.visible').length !== 0){
             $(`.${that}`).removeClass('valid');
-            handleButton;
+            $('button').addClass('disable').attr('disabled', 'disabled').html(`Can't submit`);
         }
     }
  }
