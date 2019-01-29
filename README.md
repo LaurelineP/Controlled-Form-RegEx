@@ -1,4 +1,4 @@
-# Controlled Form RegExp - [ [DEMO] ](https://laurelinep.github.io/Controlled-Form-RegEx/)
+# Controlled Form RegExp - [DEMO](https://laurelinep.github.io/Controlled-Form-RegEx/)
 ## Descrption:
 This exercise aim to practice Regular Expression\ within a signup-form ( in this case ).\
 
