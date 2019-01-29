@@ -1,6 +1,6 @@
 # Controlled-Form-RegExp
 ## Descrption:
-This exercise aim to practice Regular Expression\ within a signup-form ( in this case ).
+This exercise aim to practice Regular Expression\ within a signup-form ( in this case ).\
 [DEMO](https://laurelinep.github.io/Controlled-Form-RegEx/)
 
 ## Goal:
