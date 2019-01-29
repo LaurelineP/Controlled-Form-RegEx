@@ -28,12 +28,12 @@ function checkThat (what) {
 }
 
 function process(input, regex) {
-    var verdict = $(`.${input}`).val().match(regex) ? true : false;
-    var $class = `.${input}.warning`;
-    if(!verdict){
-        $($class).addClass('visible');
+    var match = $(`.${input}`).val().match(regex) ? true : false;
+    var $warning = `.${input}.warning`;
+    if(!match){
+        $($warning).addClass('visible');
     } else {
-        $($class).removeClass('visible');
+        $($warning).removeClass('visible')
     }
 }
 
@@ -42,7 +42,9 @@ function process(input, regex) {
  * - clean all input
  */
 
-
+/**
+ * if input
+ */
  function submit () {
      $('input').val('');
  }
