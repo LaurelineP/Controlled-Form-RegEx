@@ -1,13 +1,18 @@
-# Controlled-Form-RegEx
+# Controlled-Form-RegExp
 ## Descrption:
 This exercise aim to practice Regular Expression\ within a signup-form ( in this case ).
 
 ## Goal:
-+ Use RegEx to check what you're expecting within an input
-+ Check the input with JavaScript
++ Get input's values with JQuery
++ Check value with RegExp and JS
++ Set functionnalities related to the inputs validity
++ Add differents HTML classes to simulate error messages with CSS
++ Control the entire form to disable or enable submit button
++ Empty Form once submitted
 
 ## Technos:
 + HTML
 + CSS
 + JavaScript
-+ RegEx
++ JQuery
++ RegExp
