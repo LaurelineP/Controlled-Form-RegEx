@@ -69,4 +69,9 @@ function process(input, regex) {
 
  function submit () {
     $('input').val('');
+    $('.modal').css('display', 'block');
+}
+
+function show () {
+    $('.modal').css('display', 'none');
 }

@@ -4,6 +4,20 @@
     --darkColor : #046;
 }
 
+@font-face {
+    font-family: hello;
+    src: url(./DK\ Face\ Your\ Fears.ttf);
+  }
+
+@keyframes hehe {
+    15% { transform : translateX(15px) }
+    30% { transform : translateX(-15px) }
+    50% { transform : translateX(10px) }
+    65% { transform : translateX(-10px) }
+    80% { transform : translateX(5px) }
+    100% { transform : translateX(0px) }
+}
+
 body {
     margin: auto;
     font-family: Lato;
@@ -18,9 +32,9 @@ body {
     width: 300px;
     margin: 5% auto;
     padding: 50px;
-    border: solid 1px #EEE;
+    border: solid 0.5px #CDD;
     border-radius: 10px;
-    box-shadow: 0 1px 20px 1px #EEE;
+    box-shadow: 0 1px 3px 1px #DEE;
     background: var(--mainColor);
 }
 
@@ -28,20 +42,15 @@ body {
     font-family: Pacifico;
     text-align: center;
     color: var(--darkColor);
-    margin: 5% 0 10% 0;
-}
-form {
-    width: auto;
+    margin: 2% 0 15% 0;
 }
 
 input {
     height: 30px;
     width: 280px;
-    /* margin-top: 30px; */
     padding: 5px 15px;
     border-radius: 5px;
-    border: solid 0.5px #CEE;
-    box-shadow: 0 1px 2px 0 #CCC;
+    border: solid 0.5px#9BB;
     font-size: 1em;
 }
 
@@ -79,7 +88,42 @@ button {
 }
 
 .disable {
-    background: lightgrey;
     color: white;
-    border: lightgrey;
+    /* background: lightgrey; */
+    /* border: lightgrey; */
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px;
+    background: rgba(0,0,0,0.95);
+}
+.modal-content {
+    position: absolute;
+    width: 500px;
+    top: 0;
+    margin: 15% calc(50% - 295px);
+    background: #DDD;
+    padding: 10px 50px 0 50px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 0%;
+}
+
+.warning-user {
+    font-family: hello;
+    font-size: 2em;
+    letter-spacing: 2px;
+    animation : hehe 2s 1 ease-in-out;
+}
+iframe {
+    margin: 20px calc(50% - 200px) 0;
 }

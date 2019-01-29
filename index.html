@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Violentia" rel="stylesheet">
     <title>Controlled SignUp Form</title>
 </head>
 <body>
 <div class="container">
     <h1 class="signup-title">SignUp</h1>
     <form action="" id="signup-form" oninput="checkThat('form', event)">
-        <input type="text" class="username" name="username" placeholder="Pick your name" oninput="checkThat('username')">
+        <input type="text" class="username" name="username" placeholder="Pick your name human" oninput="checkThat('username')">
         <p class=" username warning">Must contain 5 - 12 alphanumeric characters.</p>
-        <input type="email" class="email" name="email" placeholder="smith@gmail.com" oninput="checkThat('email')">
+        <input type="email" class="email" name="email" placeholder="Smith@gmail.com" oninput="checkThat('email')">
         <p class="email warning ">Must be a valid email (e.g: me@mydomain.com).</p>
-        <input type="text" class="phone" name="phone" placeholder="1122334455" oninput="checkThat('phone')">
+        <input type="text" class="phone" name="phone" placeholder="0633333333" oninput="checkThat('phone')">
         <p class="phone warning ">Must contain 10 digits</p>
-        <input type="password" class="password" name="password" placeholder="password" oninput="checkThat('password')">
+        <input type="password" class="password" name="password" placeholder="Password" oninput="checkThat('password')">
         <p class="password warning ">At least 5 alphanumeric characters.</p>
     </form>
     <button type="submit" onclick="submit()">Submit</button>
 </div>
 
+<div class="modal" onclick="show()">
+    <div class="modal-content">
+        <div class='warning-user'>
+            <p>We have EVERYTHING now.</p>
+            <p>See you soon!!!</p>
+        </div>
+        <iframe src="./muahaha.gif" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
