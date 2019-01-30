@@ -1,38 +1,20 @@
-/* Handle changements and actions to do */
+/* Handle inputs changements and actions to do */
+/**
+ * RegExp pattern:
+ *      - username: 3-12 alphanumeric, any case,
+ *      - email: (name) @ (domain) . (extension 2-8) . (optionnal extension 2-8),
+ *      - phone: 10-11 digits
+ *      - pwd: 5 and more alphanumeric
+ */
 function checkThat (what, e) {
-    var regex;
-    switch (what) {
-        /* 5-12 alphanumeric, any case */
-        case 'username':
-            regex = new RegExp ('[a-z0-9]{5,12}','gi');
-            process(what, regex)
-            break;
-
-        /* alphanumeric, @ and .com or .fr */
-        case 'email':
-            /**
-             * (name) @ (domain) . (extension 2-8) . (optionnal extension 2-8)
-             */
-            var regex = new RegExp('^[a-z\d\.-]+@[a-z]{2,8}\.[a-z]{2,3}(\.[a-z]{2,3})?$', 'gi');
-            process(what, regex);
-            break;
-
-        /* 10 digits ( Europe ) */
-        case 'phone':
-            regex = new RegExp('^[0-9]{10}$','g'); /* or /\d{10}/ */
-            process(what, regex)
-            break;
-
-        /* 5 and more alphanumeric */
-        case 'password':
-            regex = new RegExp('[a-z0-9]{5,}','gi');
-            process(what, regex)
-            break;
-        default:
-            validateForm(e);
-    }
+    const regex = {
+        username : new RegExp (/[a-z0-9]{3,12}/gi),
+        email : new RegExp(/^[a-z\d\.-]+@[a-z]{2,8}\.[a-z]{2,3}(\.[a-z]{2,3})?$/gi),
+        phone : new RegExp(/^\d{10,11}$/),
+        password : new RegExp(/[a-z0-9]{5,}/gi),
+    };
+    what !== 'form' ? process( what, regex[what] ) : enableForm(e);
 }
-
 
 /**
  * Process x input to:
@@ -40,8 +22,8 @@ function checkThat (what, e) {
  *      - handle error messages
  */
 function process(input, regex) {
-    var match = $(`.${input}`).val().match(regex) ? true : false;
-    var $warning = `.${input}.warning`;
+    let match = $(`.${input}`).val().match(regex) ? true : false;
+    let $warning = `.${input}.warning`;
     if(!match){
         $($warning).addClass('visible');
     } else {
@@ -51,30 +33,41 @@ function process(input, regex) {
 
 
 /**
- * ValidateForm:
+ * Enable form:
  *      - by showing the submit button disable or enable
  *      - if all inputs are valid ( with class .valid )
  */
- function validateForm(e){
-    var that = $(e.target)[0].className;
+ function enableForm(e){
+    let target = $(e.target)[0].className;
     if($('.valid').length !== $('input').length){
-        $('button').addClass('disable').attr('disabled', 'disabled').html(`Can't submit`);
+        $('button')
+            .addClass('disable')
+            .attr('disabled', 'disabled')
+            .html(`Can't submit`);
     } else {
-        $('button').removeClass('disable').removeAttr('disabled').html('Submit');
+        $('button')
+            .removeClass('disable')
+            .removeAttr('disabled')
+            .html('Submit');
 
         /* Handle cases once valid and then modify input --> back to button disabled */
         if($('.visible').length !== 0){
-            $(`.${that}`).removeClass('valid');
-            $('button').addClass('disable').attr('disabled', 'disabled').html(`Can't submit`);
+            $(`.${target}`).removeClass('valid');
+            $('button')
+                .addClass('disable')
+                .attr('disabled', 'disabled')
+                .html(`Can't submit`);
         }
     }
  }
 
- function submit () {
+ function submit() {
+    let username = $('.username').val();
+    $('.username-text').html(username);
     $('input').val('');
     $('.modal').css('display', 'block');
 }
 
-function show () {
+function closeModal() {
     $('.modal').css('display', 'none');
 }
