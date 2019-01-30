@@ -1,14 +1,14 @@
 # Controlled Form RegExp - [DEMO](https://laurelinep.github.io/Controlled-Form-RegEx/)
-## Descrption:
-This exercise aim to practice Regular Expression\ within a signup-form ( in this case ).\
+## Description:
+This exercise aim to practice Regular Expression within a signup-form ( in this case ) 
+in order to control user inputs before submitting the form
 
 ## Goal:
-+ Get input's values with JQuery
-+ Check value with RegExp and JS
-+ Set functionnalities related to the inputs validity
-+ Add differents HTML classes to simulate error messages with CSS
-+ Control the entire form to disable or enable submit button
-+ Empty Form once submitted
++ Get inputs values with JQuery
++ Check those values with RegExp and JS
++ Depending on checked values,add HTML classes to simulate error messages/hint with CSS
++ Control inputs validations to disable or enable submit button
++ Empty Form once submitted.
 
 ## Technos:
 + HTML
